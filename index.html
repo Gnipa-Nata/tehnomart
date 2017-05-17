@@ -56,26 +56,38 @@
 				<div class="categories">
 
 					<div class="category materials">
-						<span>Материалы</span>
-						<a href="#">На любой вкус</a>
-						<img src="../img/" height="" width="">
+						<div class="category-title">
+							<span>Материалы</span>
+							<a href="#">На любой вкус</a>
+						</div>
+						<div class="category-image">
+							<img src="../img/" height="" width="">
+						</div>
 					</div>
 
 					<div class="category tools">
-						<span>Инструмент</span>
-						<a href="#">На все случаи</a>
-						<img src="../img/" height="" width="">
+						<div class="category-title">
+							<span>Инструмент</span>
+							<a href="#">На все случаи</a>
+						</div>
+						<div class="category-image">
+							<img src="../img/" height="" width="">
+						</div>
 					</div>
 
 					<div class="category equipment">
-						<span>Техника</span>
-						<a href="#">Для стройки</a>
-						<img src="../img/" height="" width="">
+						<div class="category-title">
+							<span>Техника</span>
+							<a href="#">Для стройки</a>
+						</div>
+						<div class="category-image">
+							<img src="../img/" height="" width="">
+						</div>
 					</div>
 
 					<div class="slider">
 						<div class="slider-inner">
-							<div class="slide1">
+							<div class="slide" id="slide1" style="background: url(img/slide1.jpg) no-repeat;">
 								<div class="slide-title">
 									<span>Перфораторы</span>
 									<p>Настоящие мужские игрушки</p>
@@ -83,13 +95,13 @@
 								<button class="btn">Открыть каталог</button>
 							</div>
 
-							<div class="slide2">
+							<!--<div class="slide" id="slide2" style="background-image: url(img/slide2.jpg);">
 								<div class="slide-title">
 									<span>Дрели</span>
 									<p>Соседям на радость!</p>
 								</div>
 								<button class="btn">Открыть каталог</button>
-							</div>
+							</div> -->
 						</div>
 
 						<div class="slider-control">
@@ -98,22 +110,34 @@
 								<div class="arrow-right"></div>
 							</div>
 							<div class="dots">
-								<div class="dot"></div>
-								<div class="dot"></div>
+								<label>
+									<input type="radio" name="slide-dot">
+								</label>
+								<label>
+									<input type="radio" name="slide-dot">
+								</label>
 							</div>
 						</div>
 					</div>
 
 					<div class="category sale">
-						<span>Скидки 50%</span>
-						<a href="#">На 350 товаров</a>
-						<img src="../img/" height="" width="">
+						<div class="category-title">
+							<span>Скидки 50%</span>
+							<a href="#">На 350 товаров</a>
+						</div>
+						<div class="category-image">
+							<img src="../img/" height="" width="">
+						</div>
 					</div>
 
 					<div class="category delivery">
-						<span>Доставка</span>
-						<a href="#">Бесплатно</a>
-						<img src="../img/" height="" width="">
+						<div class="category-title">
+							<span>Доставка</span>
+							<a href="#">Бесплатно</a>
+						</div>
+						<div class="category-image">
+							<img src="../img/" height="" width="">
+						</div>
 					</div>
 
 				</div>
@@ -176,6 +200,7 @@
 						<span>Перфоратор BOSCH<br>
 							 BFG 2000
 						</span>
+						<span class="old-price without-old-price">новинка</span>
 						<a class="new-price" href="#">12500 P.</a>
 					</article>
 
