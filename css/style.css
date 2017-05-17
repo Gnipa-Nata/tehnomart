@@ -154,8 +154,12 @@ main {
 
 .category {
 	width: 300px;
-	height: 125px;
+	height: 123px;
+	display: flex;
+	justify-content: space-between;
 	margin: 10px;
+	padding: 25px;
+	box-sizing: border-box;
 }
 
 .category p {
@@ -180,6 +184,17 @@ main {
 	line-height: 40px;
 	text-transform: uppercase;
 	text-align: center;
+}
+
+.category-title {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.category-image {
+	margin: auto 0;
 }
 
 .materials {
@@ -229,14 +244,68 @@ main {
 
 .slider {
 	float: left;
-	width: 620px;
-	height: 270px;
 	margin: 10px;
-	background-color: red;
+	background-color: #5d5347;
+	position: relative;
 }
 
-.slider p {
+.slide {
+	width: 620px;
+	height: 266px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 27px 25px 23px;
+	box-sizing: border-box;
+}
+
+.slide-title span {
+	font-size: 36px;
+	line-height: 36px;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.slide-title p {
 	margin: 0;
+	font-family: "PTSans"
+	font-size: 18px;
+	line-height: 24px;
+	color: #ffffff;
+}
+
+.slide .btn {
+	background-color: #ee3643;
+	border: none;
+	border-radius: 3px;
+	font-size: 14px;
+	line-height: 18px;
+	color: #ffffff;
+	text-transform: uppercase;
+	padding: 12px 45px;
+	cursor: pointer;
+}
+
+.dots label {
+	width: 10px;
+	height: 10px;
+	background-color: #ffffff;
+	border: 1px solid #ffffff;
+	border-radius: 50%;
+	box-sizing: border-box;
+	z-index: 15;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.dots input {
+	display: none;
 }
 
 .popular {
@@ -378,12 +447,17 @@ main {
 	text-decoration: line-through;
 }
 
+.without-old-price {
+	color: #ffffff;
+}
+
 .new-price {
+	width: 116px;
 	margin-bottom: 20px;
 	background-color: #ee3643;
 	position: relative;
-	padding-left: 37px;
-	padding-right: 20px;
+	/*padding-left: 37px;
+	padding-right: 20px;*/
 	border-radius: 3px;
 }
 
@@ -623,4 +697,12 @@ main {
 .creator {
 	display: flex;
 	flex-direction: column;
+}
+
+.feedback a,
+.creator a {
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 18px;
+	color: #ffd180;
 }
