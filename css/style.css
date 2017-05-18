@@ -250,14 +250,7 @@ main {
 }
 
 .slide {
-	width: 620px;
-	height: 266px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: flex-start;
-	padding: 27px 25px 23px;
-	box-sizing: border-box;
+	display: none;
 }
 
 .slide-title span {
@@ -289,6 +282,13 @@ main {
 	cursor: pointer;
 }
 
+.dots {
+	display: flex;
+	position: absolute;
+	top: 220px;
+	left: 295px;
+}
+
 .dots label {
 	width: 10px;
 	height: 10px;
@@ -297,15 +297,40 @@ main {
 	border-radius: 50%;
 	box-sizing: border-box;
 	z-index: 15;
-	position: absolute;
-	top: 0;
-	left: 0;
 	margin-right: 10px;
 	cursor: pointer;
 }
 
-.dots input {
+.slider input {
 	display: none;
+}
+
+.arrow-left {
+	position: absolute;
+	top: 135px;
+	left: 25px;
+	z-index: 20;
+}
+
+.arrow-right {
+	width: 25px;
+	height: 40px;
+	background-image: url(../img/icon-right.png);
+	position: absolute;
+	top: 135px;
+	right: 25px;
+}
+
+#dot1:checked ~ .slider #slide1,
+#dot2:checked ~ .slider #slide2 {
+	width: 620px;
+	height: 266px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 27px 25px 23px;
+	box-sizing: border-box;
 }
 
 .popular {
