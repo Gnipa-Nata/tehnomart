@@ -306,23 +306,29 @@ main {
 }
 
 .arrow-left {
+	width: 25px;
+	height: 40px;
+	background: url("../img/s/icon-left.png") no-repeat;
 	position: absolute;
-	top: 135px;
+	top: 115px;
 	left: 25px;
 	z-index: 20;
+	cursor: pointer;
 }
 
 .arrow-right {
 	width: 25px;
 	height: 40px;
-	background-image: url(../img/icon-right.png);
+	background: url("../img/s/icon-right.png") no-repeat;
 	position: absolute;
-	top: 135px;
+	top: 115px;
 	right: 25px;
+	z-index: 25px;
+	cursor: pointer;
 }
 
-#dot1:checked ~ .slider #slide1,
-#dot2:checked ~ .slider #slide2 {
+#dot1:checked ~ .slider-inner #slide1,
+#dot2:checked ~ .slider-inner #slide2 {
 	width: 620px;
 	height: 266px;
 	display: flex;
@@ -331,6 +337,11 @@ main {
 	align-items: flex-start;
 	padding: 27px 25px 23px;
 	box-sizing: border-box;
+}
+
+#dot1:checked ~ .slider-control label[for="dot1"],
+#dot2:checked ~ .slider-control label[for="dot2"] {
+	background-color: #ee3643;
 }
 
 .popular {
@@ -730,4 +741,150 @@ main {
 	font-size: 16px;
 	line-height: 18px;
 	color: #ffd180;
+}
+
+.breadcrumbs {
+	margin: 0 10px;
+}
+
+.breadcrumbs ul {
+	padding: 0;
+	margin: 23px 0;
+	list-style: none;
+	display: flex;
+	position: relative;
+	padding-left: 55px;
+}
+
+.breadcrumbs ul::before {
+	content: "";
+	width: 15px;
+	height: 12px;
+	background: url("../img/s/icon-home.png") no-repeat;
+	position: absolute;
+	top: 1px;
+	left: 0;
+}
+
+.breadcrumbs li {
+	padding-right: 40px;
+	text-transform: uppercase;
+	font-family: "PTSans";
+	font-size: 13px;
+	line-height: 18px;
+	position: relative;
+}
+
+.breadcrumbs li::before {
+	content: "";
+	width: 8px;
+	height: 12px;
+	position: absolute;
+	top: 3px;
+	left: -20px;
+	background: url(../img/s/breadcrumbs.png) no-repeat;
+}
+
+.breadcrumbs a {
+	text-decoration: none;
+	color: #000000;
+}
+
+.category-name {
+	background-color: #f2f6f8;
+	margin: 0 10px 20px 10px;
+}
+
+.category-name h2 {
+	text-transform: uppercase;
+	font-size: 30px;
+	line-height: 30px;
+	color: #32425c;
+	padding: 32px 30px;
+	margin: 0;
+}
+
+.catalog-content {
+	display: flex;
+}
+
+.sidebar {
+	margin: 0 10px;
+	width: 220px;
+}
+
+.sidebar-name {
+	background-color: #f7f3ec;
+	font-family: "PTSans";
+	font-size: 13px;
+	line-height: 18px;
+	text-transform: uppercase;
+	padding: 12px 18px;
+}
+
+.content {
+	width: 720px;
+}
+
+.content-sort {
+	display: flex;
+	justify-content: space-between;
+	background-color: #f7f3ec;
+	padding: 12px 18px;
+	margin: 0 10px;
+}
+
+.content-sort span {
+	font-family: "PTSans";
+	font-size: 13px;
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.content-sort ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.content-sort li {
+	margin-right: 70px;
+}
+
+.content-sort li:last-child {
+	margin-right: 0;
+}
+
+.content-sort a {
+	text-decoration: none;
+	font-family: "PTSans";
+	font-size: 13px;
+	line-height: 18px;
+	color: rgba(0,0,0,0.3);
+	text-transform: uppercase;
+}
+
+a.sort-active {
+	color: #ee3643;
+}
+
+.content-items {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.content ul {
+	list-style: none;
+	display: flex;
+}
+
+.catalog-paginator a {
+	text-decoration: none;
+	font-family: "PTSans";
+	font-size: 13px;
+	line-height: 18px;
+	text-transform: uppercase;
+	color: #000000;
 }
